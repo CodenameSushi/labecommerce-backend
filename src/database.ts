@@ -1,3 +1,4 @@
+import e from "express";
 import { TUser, TProduct, TPurchase, PRODUCT_TYPE} from "./types";
 
 export const users:  TUser[] = [{id:'1', email:'teste@gmail.com', password:'123'}, {id:'2', email:'teste2@gmail.com', password:'12345'}]
@@ -25,6 +26,10 @@ export function createProduct(productId:string, productName:string, productPrice
 
 export function getAllProducts(){
     return products
+}
+
+export function getAllPurchases(){
+    return purchases
 }
 
 export function getProductById(idToSearch:string){
