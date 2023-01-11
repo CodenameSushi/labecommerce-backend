@@ -18,4 +18,4 @@ createPurchase("1", "1", 2, 18000);
 
 console.log(getAllUsers(), products, purchases);
 
-console.log(getAllPurchasesFromUserId('1'));
+console.log(queryProductsByName('i9'));

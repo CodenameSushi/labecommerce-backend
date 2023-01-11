@@ -32,7 +32,10 @@ export function getProductById(idToSearch:string){
 }
 
 export function queryProductsByName(q:string){
-    return products.find((product) => product.name.toLowerCase() === q.toLowerCase())
+    const result = products.filter((product)=> {
+        return product.name.toLowerCase().includes(q)
+    })
+    return result
 
 }
 
