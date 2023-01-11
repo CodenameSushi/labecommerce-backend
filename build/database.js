@@ -28,7 +28,10 @@ function getProductById(idToSearch) {
 }
 exports.getProductById = getProductById;
 function queryProductsByName(q) {
-    return exports.products.find((product) => product.name.toLowerCase() === q.toLowerCase());
+    const result = exports.products.filter((product) => {
+        return product.name.toLowerCase().includes(q);
+    });
+    return result;
 }
 exports.queryProductsByName = queryProductsByName;
 function createPurchase(userId, productId, quantity, totalPrice) {
