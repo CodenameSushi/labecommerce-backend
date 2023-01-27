@@ -5,8 +5,8 @@ export enum PRODUCT_TYPE {
 }
 
 
-export type TUser = {id:string, email:string, password:string}
+export type TUser = {id:string, name:string, email:string, password:string}
 
-export type TProduct = {id:string, name:string, price:number, category:PRODUCT_TYPE}
+export type TProduct = {id:string, name:string, price:number, description:string, image_url:string, category:PRODUCT_TYPE}
 
-export type TPurchase = {userId:string, productId:string, quantity:number, totalPrice:number}
+export type TPurchase = {id:string, buyerId:string, total_price:number}
