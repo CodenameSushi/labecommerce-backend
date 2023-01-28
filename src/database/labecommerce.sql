@@ -137,6 +137,8 @@ DROP TABLE purchases;
 
 SELECT * FROM purchases;
 
+SELECT * FROM purchases WHERE buyer_id = "u002";
+
 
 
 SELECT DATETIME('now');
